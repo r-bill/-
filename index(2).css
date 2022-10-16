@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f5f5f5;
+  margin: 0;
+  /* vh 是view height 既视窗高度的意思，100就是100%占满窗口高度 */
+  height: 100vh;
+  background-color: #eee;
+}
+
+/* a标签 */
+a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+/* flex布局 */
+.flex {
+  display: flex;
+}
+
+/* 占满比例 */
+.flex1 {
+  flex: 1;
+}
+
+/* 竖向 */
+.column {
+  flex-direction: column;
+}
+
+/* 阴影 */
+.yinYing {
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+    rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+}
+
+/* 白色背景 */
+.baiSe {
+  background-color: #fff;
+}
+
+/* 上边距 */
+.sangbianju {
+  margin-top: 25px
+}
+
+/* 上下左右外边距 */
+.mg8 {
+  margin: 25px;
+}
+
+/* 导航条 */
+.daoHang {
+  padding: 10px 20px;
+  border-bottom: 1px solid rgb(201, 201, 201);
+  font-size: 14px;
+  color: #666;
+}
+
+/* 导航栏 */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: #fec433;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 边框圆角 */
+.yuanjiao {
+  border-radius: 15px;
+}
+
+.navbody {
+  /* border:1px red solid; */
+  margin: 0 10px;
+  width: 1200px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+
+.img {
+  width: 50px;
+  height: 50px;
+}
+
+.navbody>ul {
+  display: flex;
+  width: calc(100% - 100px);
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbody>ul>li {
+  margin: 5px;
+  font-weight: 500;
+  list-style: none;
+  color: aliceblue;
+  font-size: 22px;
+  height: 100%;
+  flex: 1;
+  text-align: center;
+  line-height: 64px;
+  /* 居中 */
+  /* transition: all .3s; */
+}
+
+.navbody>ul>li:hover {
+  opacity: 1;
+  background-color: #f6b206;
+}
+
+/* 分辨率大于600px */
+@media (min-width: 600px) {
+  .neirong {
+    height: 600px;
+    width: 100%;
+  }
+
+  .mg8 {
+    margin: 100px;
+  }
+
+  .sangbianju {
+    margin-top: 50px
+  }
+
+  .tupian {
+    height: 370px;
+    width: 100%;
+    margin-top: 15px
+  }
+}
+
+/* 分辨率小于600px */
+@media (max-width: 600px) {
+  .neirong {
+    height: 450px;
+    width: 100%;
+  }
+
+  .tupian {
+    margin-top: 65px;
+    height: 250px;
+    width: 100%;
+  }
+}
