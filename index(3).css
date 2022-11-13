@@ -1,0 +1,130 @@
+* {
+  /*本初始 化清除元素原有的内外边距*/
+  padding: 0;
+  margin: 0;
+}
+
+.navber {
+  /* 绝对定位 */
+  position: absolute;
+  /* 让元素的宽度占浏览器可视区域的高度 */
+  height: 60px;
+  width: 100vw;
+  right: 100px;
+  top: 70px;
+}
+.navber input {
+  /* 隐藏复选框 */
+  display: none;
+}
+.navber label {
+  z-index: 3;
+  /* 绝对定位 */
+  position: absolute;
+  /* clac方法自动计算 让元素垂直居中 */
+  top: calc(50% - 25px);
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  /* 圆角属性 */
+  border-radius: 6px;
+  /* 元素边框  */
+  border: 1px solid rgba(196, 196, 194, 0.3);
+  /* 颜色 */
+
+  background-color: #fec433;
+
+  /* 鼠标移入变成小手 */
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+/* 先把label元素内的两条线定义一下 */
+.navber label::before,
+.navber label::after {
+  content: "";
+  /* 利用两个伪元素来定义 */
+  position: absolute;
+  left: 5px;
+  width: 40px;
+  height: 4px;
+  /* 让两条线更加圆滑 */
+  border-radius: 4px;
+  background-color: #042a41;
+  /* 收回来的动画刚好相反 */
+  /* 定义过渡效果 */
+  /* 先执行top的变化 然后在0.2s后执行transfoem转换 eas-oyt是从快速到慢速的过程 */
+  transition: transform 0.2s ease-out, top 0.2s ease-out 0.2s;
+}
+/* 分别定义两条线的位置  */
+.navber label::before {
+  top: calc(50% - 10px);
+}
+.navber label::after {
+  top: calc(50% + 6px);
+}
+/* 然后定义label元素的动画效果 */
+/* checked是判断复选框是否被选中 + 是相邻兄弟选择器 找最近的下一次label元素 */
+.navber input:checked + label {
+  /* 加了insert就是内部阴影 啥都不写就是默认的外部阴影{outset} */
+  box-shadow: 5px 3px 6px 1px #f6b206 inset, -5px -3px 6px 1px #ffd467 inset;
+}
+.navber input:checked + label::before {
+  top: calc(50% - 2px);
+  /* 逆时针旋转45度 */
+  transform: rotate(-45deg);
+  /* 定义过渡效果 */
+  /* 先执行top的变化 然后在0.2s后执行transfoem转换 eas-oyt是从快速到慢速的过程 */
+  transition: top 0.2s ease-out, transform 0.2s ease-out 0.2s;
+}
+.navber input:checked + label::after {
+  top: calc(50% - 2px);
+  /* 顺时针旋转45度 */
+  transform: rotate(45deg);
+  /* 定义过渡效果 */
+  /* 先执行top的变化 然后在0.2s后执行transfoem转换 ease-out是从快速到慢速的过程 */
+  transition: top 0.2s ease-out, transform 0.2s ease-out 0.2s;
+}
+/* 移动端导航样式 start */
+.navber ul {
+  position: relative;
+  top: -6px;
+  width: 100%;
+  /* 元素的不透明度为 0 就是完全透明 */
+  opacity: 0;
+  /* 让元素缩放到0 就是直接隐藏 */
+  transform: scaleY(0);
+  /* 设置元素缩放的中心 设置到最上面的中间位置 */
+  transform-origin: 50% 0;
+  transition: all 0.5s ease-out;
+}
+.navber ul li {
+  width: 100%;
+  height: 80;
+}
+.navber ul li a {
+  /* a标签是行内元素 不设置为就没法宽高 */
+  display: block;
+  width: 100%;
+  height: 80px;
+  /* 居中 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  /* 取消文字下划线 */
+  text-decoration: none;
+  color: #042a41;
+  background-color: #fec433;
+
+  transition: all 0.3s ease-in-out;
+}
+.navber ul li a:hover {
+  background-color: #f6b206;
+}
+.navber input:checked ~ ul {
+  opacity: 1;
+  transform: scaleY(1);
+}
+/* 移动端导航样式 end */
