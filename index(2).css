@@ -94,6 +94,7 @@ nav {
   display: flex;
   width: calc(100% - 100px);
   height: 100%;
+  padding-right: 150px;
   justify-content: center;
   align-items: center;
 }
