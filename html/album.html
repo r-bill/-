@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+
+    <title>相册</title>
+    <!-- 引入字体图标库 -->
+    <link rel="stylesheet" href="../ico/iconfont.css" />
+    <link rel="stylesheet" href="../css/album.css" />
+    <link rel="stylesheet" href="../css/navigation.css">
+    <!-- 这个案例用到的是vue的语法 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  </head>
+
+  <body>  
+    
+    <!-- 轮播图 -->
+    <div
+    class="container"
+    id="app"
+    @mouseover="stopAutoPlay"
+    @mouseout="startAutoPlay"
+    >
+    <!-- 导航栏 -->
+  <div class="navbar">
+    <a href="">
+      <img
+        src="../img/logo.png"
+        style="
+          margin-left: 10px;
+          width: 50px;
+          border-radius: 6px;
+          position: absolute;
+          top: calc(50% - 26px);
+        "
+        alt=""
+    /></a>
+    <!-- 复选框的id属性值和label元素的for属性值相同的话 那么就可以通过label元素选中复选框 -->
+    <input type="checkbox" id="nav" /><label for="nav"></label>
+    <ul>
+      <li><a href="./home.html">首页</a></li>
+      <li><a href="./album.html">相册</a></li>
+      <li><a href="./404.html">404</a></li>
+    </ul>
+  </div>
+      <div class="img-box">
+        <!-- 图片 -->
+        <a href="../img/1.jpg"
+          ><img :src="item.image1" alt="" v-for="item in list" />
+        </a>
+        <img :src="item.image" alt="" v-for="item in list" />
+      </div>
+
+      <div class="bottom-box" :style="{'--b-color':list[0].bottom_color}">
+        <div class="l-box">
+          <!-- 图片下方文字 -->
+          <div class="title">{{list[active_index].title1}}</div>
+          <div class="title">{{list[active_index].title}}</div>
+          <ul class="dots">
+            <li
+              :class="[index==active_index?'pacman':'dot',is_prev?'l':'']"
+              v-for="(item,index) in list"
+              @click="changeBanner(index)"
+            >
+              <!-- 吃豆人 -->
+              <div v-if="index==active_index"></div>
+              <div v-if="index==active_index"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="r-box">
+          <span
+            class="iconfont icon-zuojiantou"
+            @click="changeBanner(-1,true)"
+          ></span>
+          <span
+            class="iconfont icon-youjiantou"
+            @click="changeBanner(-1,false)"
+          ></span>
+        </div>
+      </div>
+    </div>    
+</html>
+
+<script src="../js/album.js"></script>
