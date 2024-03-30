@@ -6,9 +6,9 @@ body {
   /* 100%窗口高度 */
   height: 100vh;
   /* 弹性布局 居中显示 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid; 
+  place-items: center;
+
   /* 渐变背景 */
   background: linear-gradient(120deg, #83c0e1 0%, #d6dce9 100%) no-repeat;
 }
@@ -16,8 +16,8 @@ li {
   list-style: none;
 }
 .container {
-  margin-top: 150px;
-  width: 488px;
+  margin-top: -150px;
+  width: 425px;
   height: 360px;
   border-radius: 6px;
   overflow: hidden;
@@ -26,12 +26,12 @@ li {
   height: 275px;
   display: flex;
   /* 计算图片偏移量,--m-left是自定义属性,在js中赋值 */
-  margin-left: calc(-488px * var(--m-left));
+  margin-left: calc(-425px * var(--m-left));
   /* 过渡 */
   transition: 0.35s;
 }
 .img-box img {
-  width: 488px;
+  width: 425px;
   height: 100%;
   object-fit: cover;
   object-position: center;

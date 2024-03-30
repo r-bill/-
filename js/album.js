@@ -7,9 +7,10 @@ new Vue({
     // 轮播图数据(json格式)
     list: [
       {
-        title1: "八年级合照",
-        image1: "../img/1-img/1-1.jpg",
+        title: "八年级合照",
+        image: "../img/1-img/1-1.jpg",
         bottom_color: "rgb(35, 11, 11)",
+        
       },
       {
         title: "预约直播送泳装手办！",

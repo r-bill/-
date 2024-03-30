@@ -5,11 +5,9 @@
 }
 body {
   /* 让页面占浏览器可视区域的高度 */
-  height: 100vh;
   background-color: #e6f1f9;
   max-width: 100%;
   overflow-x: hidden;
-  
 }
 .navbar {
   /* 相对定位 */
@@ -20,6 +18,8 @@ body {
   background-color: #e6f1f9;
   /* 盒子阴影 */
   box-shadow: 0 1px 30px #c6d9ed;
+  /* 导航栏置顶 */
+  position: fixed;
 }
 .navbar input {
   /* 隐藏复选框 */
