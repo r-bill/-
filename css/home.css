@@ -1,0 +1,72 @@
+
+/* 内容区 */
+/* flex布局 */
+.flex {
+  display: flex;
+}
+/* 占满比例 */
+.flex1 {
+  flex: 1;
+}
+/* 竖向 */
+.column {
+  flex-direction: column;
+}
+/* 阴影 */
+.shadow {
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+    rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+}
+/* 白色背景 */
+.white {
+  background-color: #fff;
+}
+/* 上下左右外边距 */
+.mg8 {
+  margin: 50px;
+}
+/* 边框圆角 */
+.fillet {
+  border-radius: 15px;
+}
+/* 分辨率小于600px */
+@media (max-width: 1017px) {
+  .neirong {
+    height: 400px;
+    width: 100%;
+  }
+  /* 上边距 */
+  .t-margin {
+    margin-top: 10px;
+  }
+  .mg8 {
+    margin: 30px;
+  }
+
+  .tupian {
+    margin-top: 45px;
+    height: 300px;
+    width: 100%;
+  }
+}
+/* 分辨率大于600px */
+@media (min-width: 1017px) {
+  .neirong {
+    height: 600px;
+    width: 100%;
+  }
+
+  .mg8 {
+    margin: 50px;
+  }
+
+  /* 上边距 */
+  .sangbianju {
+    margin-top: 10px;
+  }
+
+  .tupian {
+    height: 800px;
+    width: 100%;
+  }
+}
