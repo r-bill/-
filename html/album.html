@@ -1,89 +1,97 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
-    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/navigation.css" />
+    <link rel="stylesheet" href="../css/album.css" />
 
-    <title>相册</title>
-    <!-- 引入字体图标库 -->
-    <link rel="stylesheet" href="../ico/iconfont.css" />
-    <link rel="stylesheet" href="../css/album copy.css" />
-    <link rel="stylesheet" href="../css/navigation.css">
-    <!-- 这个案例用到的是vue的语法 -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>图片轮播</title>
+    <style></style>
   </head>
-
-  <body>  
-    
-    <!-- 轮播图 -->
+  <body>
     <!-- 导航栏 -->
-  <div style=" top: 0; " class="navbar">
-    <a href="">
-      <img
-        src="../img/logo.png"
-        style="
-          margin-left: 10px;
-          width: 50px;
-          border-radius: 6px;
-          position: absolute;
-          top: calc(50% - 26px);
-        "
-        alt=""
-    /></a>
-    <!-- 复选框的id属性值和label元素的for属性值相同的话 那么就可以通过label元素选中复选框 -->
-    <input type="checkbox" id="nav" /><label for="nav"></label>
-    <ul>
-      <li><a href="./home.html">首页</a></li>
-      <li><a href="./album.html">相册</a></li>
-      <li><a href="./changelog.html">更新日志</a></li>
+    <div style="top: 0" class="navbar">
+      <a href="">
+        <img
+          src="../img/logo.png"
+          style="
+            margin-left: 10px;
+            width: 50px;
+            border-radius: 6px;
+            position: absolute;
+            top: calc(50% - 26px);
+          "
+          alt="网站Logo"
+      /></a>
+      <!-- 复选框的id属性值和label元素的for属性值相同的话 那么就可以通过label元素选中复选框 -->
+      <input type="checkbox" id="nav" /><label for="nav"></label>
+      <ul>
+        <li><a href="./home.html">首页</a></li>
+        <li><a href="./album.html">相册</a></li>
+        <li><a href="./changelog.html">更新日志</a></li>
+      </ul>
+    </div>
 
-    </ul>
-  </div>
-  <!-- 轮播图 -->
-    <div
-    class="container"
-    id="app"
-    @mouseover="stopAutoPlay"
-    @mouseout="startAutoPlay"
-    >
-      <div class="img-box">
-        <!-- 图片 -->
-
-        <img :src="item.image" alt="" v-for="item in list" />
+    <div class="slideshow-container">
+      <!-- 图片轮播内容 -->
+      <div class="mySlides fade">
+        <img src="../img/1-img/1-1.jpg" style="width: 100%" />
+        <div class="text">八年级集体照</div>
       </div>
 
-      <div class="bottom-box" :style="{'--b-color':list[0].bottom_color}">
-        <div class="l-box">
-          <!-- 图片下方文字 -->
-          <div class="title">{{list[active_index].title}}</div>
-          <ul class="dots">
-            <li
-              :class="[index==active_index?'pacman':'dot',is_prev?'l':'']"
-              v-for="(item,index) in list"
-              @click="changeBanner(index)"
-            >
-              <!-- 吃豆人 -->
-              <div v-if="index==active_index"></div>
-              <div v-if="index==active_index"></div>
-            </li>
-          </ul>
-        </div>
-        <div class="r-box">
-          <span
-            class="iconfont icon-zuojiantou"
-            @click="changeBanner(-1,true)"
-          ></span>
-          <span
-            class="iconfont icon-youjiantou"
-            @click="changeBanner(-1,false)"
-          ></span>
-        </div>
+      <div class="mySlides fade">
+        <img src="../img/1-img/1-2.jpg" style="width: 100%" />
+        <div class="text">毕业动作照</div>
       </div>
-    </div>    
-    
+
+      <!-- 前后切换按钮和下载按钮 -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <div>
+      <button class="download-btn" onclick="downloadImage()">下载图片</button>
+      <button class="goBack-btn" onclick="goBack()">返回上一页</button>
+    </div>
+
+    <script>
+      var slideIndex = 0;
+      showSlides();
+
+      // 函数：显示幻灯片
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 8000); // 每8秒切换图片
+      }
+      // 函数：切换幻灯片
+      function plusSlides(n) {
+        showSlides(slideIndex + n);
+      }
+
+      // 函数：下载图片
+      function downloadImage() {
+        var currentSlide =
+          document.getElementsByClassName("mySlides")[slideIndex - 1];
+        var imgSrc = currentSlide.querySelector("img").src;
+        var link = document.createElement("a");
+        link.href = imgSrc;
+        link.download = "image.jpg";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+  </body>
 </html>
-
-<script src="../js/album.js"></script>

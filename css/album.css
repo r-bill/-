@@ -1,211 +1,87 @@
+/* 设置全局样式，清除默认的margin和padding */
 * {
   margin: 0;
   padding: 0;
 }
-body {
-  /* 100%窗口高度 */
-  height: 100vh;
-  /* 弹性布局 居中显示 */
-  display: grid;
-  place-items: center;
 
-  /* 渐变背景 */
-  background: linear-gradient(120deg, #83c0e1 0%, #d6dce9 100%) no-repeat;
-}
-li {
-  list-style: none;
-}
-/* 图片底部的渐变部分 */
-.bottom-box::before {
-  content: "";
-  width: 100%;
-  height: 50px;
-  /* 背景渐变（透明——底部区域同色，上到下） */
-  background: linear-gradient(to bottom, transparent, var(--b-color));
-  /* 绝对定位 位置上移它的高度 */
-  position: absolute;
-  top: -50px;
-}
-/* 底部区域的左侧部分 */
-.bottom-box .l-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 12px;
-  /* 计算宽度 */
-  width: calc(488px - 92px - 12px);
-}
-.bottom-box .title {
-  width: 100%;
-  font-size: 18px;
-  line-height: 25px;
-  /* 标题不换行，溢出显示省略号 */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.bottom-box .dots {
-  display: flex;
-  margin-top: 10px;
-}
-/* 指示器（小圆点） */
-.bottom-box li {
-  width: 8px;
-  height: 8px;
-  background-color: rgba(255, 255, 255, 0.4);
-  margin: 4px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-/* 指示器选中态（吃豆人） */
-.bottom-box li.pacman {
+/* 图片轮播容器的样式 */
+.slideshow-container {
+  max-width: 100%;
   position: relative;
-  width: 14px;
-  height: 14px;
-  background-color: transparent;
-  margin-top: 1px;
-}
-/* 吃豆人由两个div组成 */
-.bottom-box li.pacman div {
-  width: 0;
-  height: 0;
-  border: 7px solid #fff;
-  border-radius: 50%;
-  border-right-width: 7px;
-  border-right-color: transparent;
-  /* 绝对定位 两个重合 */
-  position: absolute;
-}
-/* 吃豆人朝向左 */
-.bottom-box li.pacman.l {
-  transform: rotate(180deg);
-}
-/* 接下来分别为吃豆人的两个部分设置动画 */
-.bottom-box li.pacman div:nth-child(1) {
-  /* 执行动画：动画名 时长 线性的 停留在最后一帧 */
-  animation: pacman1 0.75s linear forwards;
-}
-.bottom-box li.pacman div:nth-child(2) {
-  animation: pacman2 0.75s linear forwards;
-}
-/* 底部区域的右侧部分 */
-.bottom-box .r-box {
-  display: flex;
-  padding-top: 12px;
-  padding-left: 12px;
-}
-/* 上一页、下一页按钮 */
-.bottom-box .r-box span {
-  background-color: rgba(255, 255, 255, 0.1);
-  width: 28px;
-  height: 28px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 8px;
-  font-size: 16px;
-  margin-right: 12px;
-}
-.bottom-box .r-box span:hover {
-  cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.2);
+  margin-top: 66px;
 }
 
-/* 定义吃豆人动画 */
-@keyframes pacman1 {
-  0% {
-    transform: rotate(360deg);
-  }
-  40% {
-    transform: rotate(270deg);
-  }
-  60% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(270deg);
-  }
+
+.mySlides {
+  display: none; /* 初始时隐藏所有幻灯片 */
 }
-@keyframes pacman2 {
-  0% {
-    transform: rotate(0deg);
-  }
-  40% {
-    transform: rotate(90deg);
-  }
-  60% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(90deg);
-  }
+
+/* 前后切换按钮的样式 */
+.prev,
+.next {
+  cursor: pointer; /* 鼠标悬停时显示手型光标 */
+  position: absolute; /* 绝对定位 */
+  top: 50%; /* 顶部距离50% */
+  width: auto; /* 宽度自适应内容 */
+  padding: 16px; /* 内边距 */
+  margin-top: -22px; /* 负边距使按钮上下垂直居中 */
+  color: white; /* 文字颜色 */
+  font-weight: bold; /* 字体加粗 */
+  font-size: 18px; /* 字体大小 */
+  transition: 0.6s ease; /* 平滑过渡效果 */
+  border-radius: 0 3px 3px 0; /* 边框圆角 */
 }
-/* 手机屏幕宽度小于500px时 */
-@media (max-width: 500px) {
-  .container {
-    margin-top: -300px;
-    width: 488px;
-    height: 360px;
-    border-radius: 6px;
-    overflow: hidden;
-  }
-  .img-box {
-    height: 275px;
-    display: flex;
-    /* 计算图片偏移量,--m-left是自定义属性,在js中赋值 */
-    margin-left: calc(-488px * var(--m-left));
-    /* 过渡 */
-    transition: 0.35s;
-  }
-  .img-box img {
-    width: 100%;
-    height: 100%;
-    object-position: center;
-  }
-  .bottom-box {
-    /* 计算底部区域高度 */
-    height: calc(360px - 275px);
-    display: flex;
-    /* --b-color是自定义属性，在js中会进行动态赋值 */
-    --b-color: #000;
-    background-color: var(--b-color);
-    color: #fff;
-    /* 相对定位 */
-    position: relative;
-  }
+
+.next {
+  right: 0; /* 右侧定位 */
+  border-radius: 3px 0 0 3px; /* 右侧圆角 */
 }
-/* 电脑屏幕宽度大于500px时 */
-@media (min-width: 500px) {
-  .container {
-    margin-top: -150px;
-    width: 425px;
-    height: 360px;
-    border-radius: 6px;
-    overflow: hidden;
-  }
-  .img-box {
-    height: 275px;
-    display: flex;
-    /* 计算图片偏移量,--m-left是自定义属性,在js中赋值 */
-    margin-left: calc(-425px * var(--m-left));
-    /* 过渡 */
-    transition: 0.35s;
-  }
-  .img-box img {
-    width: 425px;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-  .bottom-box {
-    /* 计算底部区域高度 */
-    height: calc(360px - 275px);
-    display: flex;
-    /* --b-color是自定义属性，在js中会进行动态赋值 */
-    --b-color: #000;
-    background-color: var(--b-color);
-    color: #fff;
-    /* 相对定位 */
-    position: relative;
-  }
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* 鼠标悬停时的背景颜色 */
+}
+
+/* 文本样式 */
+.text {
+  color: #f2f2f2; /* 文本颜色 */
+  font-size: 16px; /* 字体大小 */
+  padding: 8px 12px; /* 内边距 */
+  position: absolute; /* 绝对定位 */
+  bottom: 8px; /* 底部距离 */
+  width: 100%; /* 宽度100% */
+  text-align: center; /* 文本居中 */
+  font-weight: bold; /* 字体加粗 */
+}
+
+.numbertext {
+  color: #f2f2f2; /* 文本颜色 */
+  font-size: 12px; /* 字体大小 */
+  padding: 8px 12px; /* 内边距 */
+  position: absolute; /* 绝对定位 */
+  top: 0; /* 顶部距离 */
+}
+
+/* 下载按钮的样式 */
+.download-btn {
+  position: absolute; /* 绝对定位 */
+  bottom: 10px; /* 底部距离 */
+  right: 10px; /* 右侧距离 */
+  background-color: #4caf50; /* 背景颜色 */
+  color: white; /* 文字颜色 */
+  padding: 10px 20px; /* 内边距 */
+  font-size: 16px; /* 字体大小 */
+  border-radius: 5px; /* 边框圆角 */
+  border: none; /* 无边框 */
+}
+.goBack-btn {
+  position: absolute; /* 绝对定位 */
+  bottom: 10px; /* 底部距离 */
+  left: 10px; /* 左侧距离 */
+  background-color: #4caf50; /* 背景颜色 */
+  color: white; /* 文字颜色 */
+  padding: 10px 20px; /* 内边距 */
+  font-size: 16px; /* 字体大小 */
+  border-radius: 5px; /* 边框圆角 */
+  border: none; /* 无边框 */
 }
