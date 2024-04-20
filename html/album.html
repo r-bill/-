@@ -10,7 +10,7 @@
     <title>相册</title>
     <!-- 引入字体图标库 -->
     <link rel="stylesheet" href="../ico/iconfont.css" />
-    <link rel="stylesheet" href="../css/album.css" />
+    <link rel="stylesheet" href="../css/album copy.css" />
     <link rel="stylesheet" href="../css/navigation.css">
     <!-- 这个案例用到的是vue的语法 -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
@@ -38,7 +38,8 @@
     <ul>
       <li><a href="./home.html">首页</a></li>
       <li><a href="./album.html">相册</a></li>
-      <li><a href="./404.html">404</a></li>
+      <li><a href="./404.html">更新日志(测试中)</a></li>
+
     </ul>
   </div>
   <!-- 轮播图 -->
@@ -50,7 +51,6 @@
     >
       <div class="img-box">
         <!-- 图片 -->
-<img :src="item.image" alt="" v-for="item in list" />
 
         <img :src="item.image" alt="" v-for="item in list" />
       </div>

@@ -23,7 +23,7 @@
 }
 /* 上下左右外边距 */
 .mg8 {
-  margin: 50px;
+  margin: 80px;
 }
 /* 边框圆角 */
 .fillet {
@@ -37,7 +37,7 @@
   }
   /* 上边距 */
   .t-margin {
-    margin-top: 10px;
+    margin-top: 15px;
   }
   .mg8 {
     margin: 30px;
@@ -57,12 +57,12 @@
   }
 
   .mg8 {
-    margin: 50px;
+    margin: 30px;
   }
 
   /* 上边距 */
-  .sangbianju {
-    margin-top: 10px;
+  .t-margin {
+    margin-top: 20px;
   }
 
   .tupian {
