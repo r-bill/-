@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>首页</title>
-    <link rel="stylesheet" href="../css/navigation.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+
+    <link rel="stylesheet" href="../css/navigation.css" />
     <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
   </head>
   <body>
     <!-- 导航栏 -->
@@ -13,6 +16,7 @@
       <a href="">
         <img
           src="../img/logo.png"
+          alt="Logo"
           style="
             margin-left: 10px;
             width: 50px;
@@ -20,15 +24,14 @@
             position: absolute;
             top: calc(50% - 26px);
           "
-          alt=""
-      /></a>
+        />
+      </a>
       <!-- 复选框的id属性值和label元素的for属性值相同的话 那么就可以通过label元素选中复选框 -->
       <input type="checkbox" id="nav" /><label for="nav"></label>
       <ul>
         <li><a href="./home.html">首页</a></li>
         <li><a href="./album copy.html">相册</a></li>
         <li><a href="./404.html">更新日志(测试中)</a></li>
-
       </ul>
     </div>
 
@@ -38,7 +41,10 @@
         <!-- 列表区 -->
         <div class="column">
           <!-- 白色盒子 -->
-          <div style="margin-top: 66px;" class="white shadow neirong fillet t-margin"></div>
+          <div
+            style="margin-top: 66px"
+            class="white shadow neirong fillet t-margin"
+          ></div>
           <div class="white shadow neirong fillet t-margin"></div>
           <div class="white shadow neirong fillet t-margin"></div>
           <div class="white shadow neirong fillet t-margin"></div>
@@ -50,5 +56,43 @@
         </div>
       </div>
     </div>
+          <!-- 页脚 -->
+          <footer>
+            <div class="footer-container">
+              <!-- 页脚相关资源 -->
+              <div class="footer-section">
+                <h4>相关资源</h4>
+                <a href="#">资源链接一</a>
+                <a href="#">资源链接二</a>
+                <a href="#">资源链接三</a>
+              </div>
+              <!-- 页脚帮助信息 -->
+              <div class="footer-section">
+                <h4>帮助信息</h4>
+                <a href="#">帮助链接一</a>
+                <a href="#">帮助链接二</a>
+                <a href="#">帮助链接三</a>
+              </div>
+              <!-- 页脚合作单位 -->
+              <div class="footer-section">
+                <h4>合作单位</h4>
+                <a href="#">单位链接一</a>
+                <a href="#">单位链接二</a>
+                <a href="#">单位链接三</a>
+              </div>
+            </div>
+            <div class="copyright"><p>Copyright © 2022-2024</p></div>
+          </footer>
+    
+    <button class="button" onclick="scrollToTop()"></button>
+    <script>
+      function scrollToTop() {
+        // 滚动到顶部的函数
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth", // 平滑滚动
+        });
+      }
+    </script>
   </body>
 </html>

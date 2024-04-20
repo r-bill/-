@@ -1,0 +1,54 @@
+/* 设置整个页面的字体为Arial，sans-serif，并设定背景为浅灰色，边距归零 */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+/* 为content类添加样式 */
+.content {
+  /* 上边距100像素，并添加内边距为20像素 */
+  margin-top: 100px;
+  padding: 20px;
+  /* ul标签的上边距为50像素，去掉默认的列表样式，并设定内边距和外边距均为零 */
+  ul {
+    margin-top: 50px;
+    list-style-type: none;
+    padding: 0;
+  }
+  /* li标签的上边距为20像素，背景色为白色，内边距为10像素，下外边距为10像素，添加浅阴影效果 */
+  li {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  /* 鼠标悬停在li标签上时，背景色变浅灰色 */
+  li:hover {
+    background-color: #f9f9f9;
+  }
+  /* 段落标签的上边距为5像素，下边距为零 */
+  p {
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+}
+.content h1 {
+  color: #333;
+  text-align: center;
+}
+
+/* 类名为p的样式 */
+.copyright {
+  display: block;
+  margin: 1em 0;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+  text-indent: 20px;
+  text-align: center;
+}
+

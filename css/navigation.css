@@ -66,7 +66,8 @@ body {
 
 /* 导航栏标签选中样式 */
 .navbar input:checked + label {
-  box-shadow: 0 0 0 #fff, 0 0 0 #fff, 5px 3px 6px 1px #c6d9ed inset, -5px -3px 6px 1px #fff inset; /* 阴影效果 */
+  box-shadow: 0 0 0 #fff, 0 0 0 #fff, 5px 3px 6px 1px #c6d9ed inset,
+    -5px -3px 6px 1px #fff inset; /* 阴影效果 */
 }
 
 .navbar input:checked + label::before {
@@ -153,6 +154,31 @@ body {
   }
 
   .navbar ul li a:hover {
-    box-shadow: 0 0 0 #fff, 0 0 0 #fff, 5px 3px 6px 1px #c6d9ed inset, -5px -3px 6px 1px #fff inset; /* 阴影效果 */
+    box-shadow: 0 0 0 #fff, 0 0 0 #fff, 5px 3px 6px 1px #c6d9ed inset,
+      -5px -3px 6px 1px #fff inset; /* 阴影效果 */
   }
+}
+/* 返回顶部按钮 */
+.button {
+  background-color: #e6f1f9; /* 背景色 */
+  color: white; /* 文本颜色 */
+  padding: 15px; /* 内边距 */
+  border: none; /* 去掉边框 */
+  border-radius: 5px; /* 圆角 */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+  cursor: pointer; /* 鼠标指针样式 */
+  transition: background-color 0.3s ease; /* 平滑过渡效果 */
+  position: fixed; /* 固定定位 */
+  right: 10px; /* 左侧距离 */
+  top: 80vh; /* 顶部距离 */
+  width: 50px; /* 按钮宽度 */
+  height: 50px; /* 按钮高度 */
+  overflow: hidden; /* 隐藏溢出的部分 */
+  background-size: contain; /* 调整背景图片大小以适应按钮 */
+  background-image: url("../img/button/arrow-up.svg");
+  background-repeat: no-repeat;
+}
+
+.button:hover {
+  background-color: #c6d9ed; /* 悬停时的背景色 */
 }
