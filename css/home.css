@@ -1,4 +1,7 @@
-/* 内容区 */
+/* 隐藏垂直滚动条 */
+body {
+  overflow-y: scroll;
+}
 /* flex布局 */
 .flex {
   display: flex;

@@ -1,47 +1,48 @@
 /* 页脚元素，背景颜色为浅灰色，上下内边距为20像素，字体设为Arial，sans-serif */
 footer {
-    width: 100%;
-    background-color: #e6f1f9; /* 背景颜色 */
-    padding: 20px 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* 类名为footer-container的样式 */
-  .footer-container {
-    /* 显示为弹性盒，在水平方向上等距排列，并设置最大宽度为1200像素，左右自动外边距为零 */
-    display: flex;
-    justify-content: space-evenly;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* 类名为footer-section的h4标签样式 */
-  .footer-section h4 {
-    /* 颜色设为深灰色，下边距为10像素 */
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  /* 类名为footer-section的a标签样式 */
-  .footer-section a {
-    /* 显示为块级元素，颜色为浅灰色，去掉下划线并设置外边距 */
-    display: block;
-    color: #666;
-    text-decoration: none;
-    margin-bottom: 8px; /* 在链接之间添加一些间隔 */
-  }
-  
-  /* 悬停在类名为footer-section的a标签上时添加下划线 */
-  .footer-section a:hover {
-    text-decoration: underline;
-  }/* 类名为p的样式 */
+  width: 100%;
+  background-color: #e6f1f9; /* 背景颜色 */
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+/* 类名为footer-container的样式 */
+.footer-container {
+  text-align: center; /* 文本居中 */
+  /* 显示为弹性盒，在水平方向上等距排列，并设置最大宽度为1200像素，左右自动外边距为零 */
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 类名为footer-section的h4标签样式 */
+.footer-section h4 {
+  /* 颜色设为深灰色，下边距为10像素 */
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* 类名为footer-section的a标签样式 */
+.footer-section a {
+  text-align: center; /* 文本居中 */
+  /* 显示为块级元素，颜色为浅灰色，去掉下划线并设置外边距 */
+  display: block;
+  color: #666;
+  text-decoration: none;
+  margin-bottom: 8px; /* 在链接之间添加一些间隔 */
+}
+
+/* 悬停在类名为footer-section的a标签上时添加下划线 */
+.footer-section a:hover {
+  text-decoration: underline;
+} /* 类名为p的样式 */
 .copyright {
-    display: block;
-    margin: 1em 0;
-    color: #666;
-    font-size: 14px;
-    line-height: 1.5;
-    text-indent: 20px;
-    text-align: center;
-  }
-  
+  display: block;
+  margin: 1em 0;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+  text-indent: 20px;
+  text-align: center;
+}

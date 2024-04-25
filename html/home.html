@@ -23,8 +23,7 @@
             border-radius: 6px;
             position: absolute;
             top: calc(50% - 26px);
-          "
-        />
+          " />
       </a>
       <!-- 复选框的id属性值和label元素的for属性值相同的话 那么就可以通过label元素选中复选框 -->
       <input type="checkbox" id="nav" /><label for="nav"></label>
@@ -34,7 +33,10 @@
         <li><a href="./changelog.html">更新日志</a></li>
       </ul>
     </div>
+    <audio id="myAudio" autoplay>
+      <source src="" type="audio/mpeg">
 
+  </audio>
     <!-- 内容区 -->
     <div style="overflow: auto" class="flex1 flex">
       <div style="flex: 3" class="column mg8">
@@ -43,8 +45,7 @@
           <!-- 白色盒子 -->
           <div
             style="margin-top: 66px"
-            class="white shadow neirong fillet t-margin"
-          ></div>
+            class="white shadow neirong fillet t-margin"></div>
           <div class="white shadow neirong fillet t-margin"></div>
           <div class="white shadow neirong fillet t-margin"></div>
           <div class="white shadow neirong fillet t-margin"></div>
@@ -59,12 +60,12 @@
     <!-- 页脚 -->
     <footer>
       <div class="footer-container">
-        <!-- 页脚相关资源 -->
+        <!-- 页脚相关链接 -->
         <div class="footer-section">
-          <h4>相关资源</h4>
-          <a href="#">资源链接一</a>
-          <a href="#">资源链接二</a>
-          <a href="#">资源链接三</a>
+          <h4>相关链接</h4>
+          <a href="./home.html">首页</a>
+          <a href="./album.html">相册</a>
+          <a href="./changelog.html">更新日志</a>
         </div>
         <!-- 页脚帮助信息 -->
         <div class="footer-section">
@@ -93,6 +94,10 @@
           behavior: "smooth", // 平滑滚动
         });
       }
+      window.onload = function() {
+            var audio = document.getElementById("myAudio");
+            audio.play();
+        }
     </script>
   </body>
 </html>
