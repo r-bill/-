@@ -12,7 +12,11 @@ body {
 }
 /* 竖向 */
 .column {
-  flex-direction: column;
+  display: flex;
+  flex-direction: column; /* 垂直排列 */
+  align-items: center; /* 水平居中对齐子元素 */
+  justify-content: space-around; /* 子元素之间平均分布空间 */
+  padding: 20px;
 }
 /* 阴影 */
 .shadow {
@@ -24,26 +28,29 @@ body {
   background-color: #fff;
 }
 /* 上下左右外边距 */
+
 .mg8 {
-  margin: 80px;
+  margin: 8px;
 }
 /* 边框圆角 */
 .fillet {
   border-radius: 15px;
 }
 /* 分辨率小于600px */
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
 @media (max-width: 1017px) {
   .neirong {
-    height: 400px;
+
     width: 100%;
   }
   /* 上边距 */
   .t-margin {
     margin-top: 15px;
   }
-  .mg8 {
-    margin: 30px;
-  }
+
 
   .tupian {
     margin-top: 45px;
@@ -54,13 +61,11 @@ body {
 /* 分辨率大于600px */
 @media (min-width: 1017px) {
   .neirong {
-    height: 600px;
+
     width: 100%;
   }
 
-  .mg8 {
-    margin: 30px;
-  }
+
 
   /* 上边距 */
   .t-margin {
