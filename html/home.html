@@ -29,6 +29,29 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影 */
         padding: 20px; /* 内边距 */
       }
+      .email-container {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* 调整图片与按钮之间的间距 */
+      }
+
+      .email-icon {
+        width: 50px; /* 或者根据需要调整大小 */
+        height: auto;
+      }
+
+      .message-button {
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      .message-button:hover {
+        background-color: #0056b3;
+      }
     </style>
   </head>
   <body>
@@ -80,10 +103,16 @@
               <img
                 src="../img/1-img/1-2.jpg"
                 alt="初中毕业照片"
-                style="width: 100%;margin-top: 30px;  border-radius: 8px" />
-              <p style="margin-top: 30px;">毕业不是结束，而是新旅程的开始。</p>
+                style="width: 100%; margin-top: 30px; border-radius: 8px" />
+              <p style="margin-top: 30px">毕业不是结束，而是新旅程的开始。</p>
             </div>
           </div>
+          <!-- <div class="white shadow neirong fillet t-margin"
+            ><div class="email-container">
+              <img src="email-icon.png" alt="Email Icon" class="email-icon" />
+              <a href="message-board.html" class="message-button">前往留言板</a>
+            </div>
+          </div> -->
         </div>
       </div>
     </div>
