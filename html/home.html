@@ -1,152 +1,115 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>首页</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
 
-    <link rel="stylesheet" href="../css/navigation.css" />
-    <link rel="stylesheet" href="../css/home.css" />
-    <link rel="stylesheet" href="../css/footer.css" />
-    <style>
-      h2 {
-        color: #333;
-        font-size: 24px;
-        text-align: center; /* 标题居中 */
-        margin-bottom: 15px; /* 标题和文本之间添加些间隔 */
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>首页</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
 
-      p {
-        color: #666;
-        line-height: 1.6; /* 行高增加，增强可读性 */
-        text-align: justify; /* 文本两端对齐 */
-        margin-bottom: 10px; /* 段落之间的间隔 */
-      }
-      .white {
-        background: #fff;
-        border-radius: 8px; /* 圆角 */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影 */
-        padding: 20px; /* 内边距 */
-      }
-      .email-container {
-        display: flex;
-        align-items: center;
-        gap: 10px; /* 调整图片与按钮之间的间距 */
-      }
+  <link rel="stylesheet" href="../css/navigation.css" />
+  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
 
-      .email-icon {
-        width: 50px; /* 或者根据需要调整大小 */
-        height: auto;
-      }
+</head>
 
-      .message-button {
-        padding: 8px 16px;
-        background-color: #007bff;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-      }
-
-      .message-button:hover {
-        background-color: #0056b3;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- 导航栏 -->
-    <div class="navbar">
-      <a href="">
-        <img
-          src="../img/logo.png"
-          alt="Logo"
-          style="
+<body>
+  <!-- 导航栏 -->
+  <div class="navbar">
+    <a href="">
+      <img src="../img/logo.png" alt="Logo" style="
             margin-left: 10px;
             width: 50px;
             border-radius: 6px;
             position: absolute;
             top: calc(50% - 26px);
           " />
-      </a>
-      <!-- 复选框的id属性值和label元素的for属性值相同的话 那么就可以通过label元素选中复选框 -->
-      <input type="checkbox" id="nav" /><label for="nav"></label>
-      <ul>
-        <li><a href="./home.html">首页</a></li>
-        <li><a href="./album.html">相册</a></li>
-        <li
-          ><a
-            href="https://static-mp-7d81c498-1dd1-4c61-9e2a-316a8c29746a.next.bspapp.com/"
-            >留言板</a
-          ></li
-        >
+    </a>
+    <!-- 复选框的id属性值和label元素的for属性值相同的话 那么就可以通过label元素选中复选框 -->
+    <input type="checkbox" id="nav" /><label for="nav"></label>
+    <ul>
+      <li><a href="./home.html">首页</a></li>
+      <li><a href="./album.html">相册</a></li>
+      <li><a href="https://static-mp-7d81c498-1dd1-4c61-9e2a-316a8c29746a.next.bspapp.com/">留言板</a></li>
 
-        <li><a href="./changelog.html">更新日志</a></li>
-      </ul>
-    </div>
+      <li><a href="./changelog.html">更新日志</a></li>
+    </ul>
+  </div>
 
-    <!-- 内容区 -->
-    <div style="overflow: auto" class="flex1 flex">
-      <div style="flex: 3" class="column mg8">
-        <!-- 列表区 -->
-        <div class="column">
-          <!-- 白色盒子 -->
-          <div
-            style="margin-top: 66px"
-            class="white shadow neirong fillet t-margin"
-            ><!-- 初中毕业特别内容 -->
-            <div class="column mg8">
-              <h2>初中毕业纪念</h2>
-              <p
-                >初中生活即将结束，我们一起回忆那些美好的时光。感谢所有老师和同学的支持与陪伴，未来的道路我们继续携手前行。</p
-              >
-              <img
-                src="../img/1-img/1-2.jpg"
-                alt="初中毕业照片"
-                style="width: 100%; margin-top: 30px; border-radius: 8px" />
-              <p style="margin-top: 30px">毕业不是结束，而是新旅程的开始。</p>
-            </div>
-          </div>
-          <!-- <div class="white shadow neirong fillet t-margin"
-            ><div class="email-container">
-              <img src="email-icon.png" alt="Email Icon" class="email-icon" />
-              <a href="message-board.html" class="message-button">前往留言板</a>
-            </div>
-          </div> -->
+  <!-- 内容区 -->
+  <div style="overflow: auto" class="flex1 flex">
+    <div style="flex: 3" class="column mg8">
+      <!-- 列表区 -->
+      <div class="column">
+        <!-- 白色盒子 -->
+        <div style="margin-top: 66px" class="white shadow neirong fillet t-margin">
+          <!-- 初中毕业特别内容 -->
+          <h2>初中毕业纪念</h2>
+          <p>初中生活即将结束，我们一起回忆那些美好的时光。感谢所有老师和同学的支持与陪伴，未来的道路我们继续携手前行。</p>
+          <img src="../img/1-img/1-2.jpg" alt="初中毕业照片" style="width: 100%; margin-top: 30px; border-radius: 8px" />
+          <h3 style="margin-top: 30px">毕业不是结束，而是新旅程的开始。</h3>
+        </div>
+
+
+        <div class="white shadow neirong fillet t-margin">
+
+          <div class="column mg8">
+            <h2>致我们终将逝去的初中时光</h2>
+
+            <p> 亲爱的同学们：<br>
+              <span style="margin-left: 30px;"> 当我们轻轻点击这个网站，仿佛又回到了那个充满欢笑和泪水的初中时代。这里，是我们共同走过的青春足迹，是我们彼此陪伴的温馨记忆。</span>
+              <br>
+              <span style="margin-left: 30px;">
+                初中三年，如白驹过隙，转瞬即逝。但在这短暂的时光里，我们一同经历了太多太多。课堂上的争论、操场上的奔跑、考试前的紧张、放假后的狂欢……每一个瞬间，都成为了我们心中不可磨灭的印记。
+              </span> <br>
+              <span style="margin-left: 30px;">
+                如今，我们即将告别这个充满回忆的校园，走向新的征程。或许未来的路会充满未知和挑战，但请相信，我们曾经共同度过的这段时光，将是我们最宝贵的财富。
+              </span> <br>
+              <span style="margin-left: 30px;"> 愿你在未来的日子里，不忘初心，勇往直前。无论遇到什么困难和挫折，都能保持那份纯真和热情，像我们在初中时代一样，无畏无惧、充满活力。
+              </span> <br>
+              <span style="margin-left: 30px;">
+                最后，让我们再次回到那个熟悉的教室，回到那个充满欢声笑语的操场，回到那个我们共同度过的美好时光。感谢你们陪我走过这段难忘的旅程，愿我们的友谊长存，愿我们的未来更加辉煌！
+              </span> <br>
+              <span style="margin-left: 30px;"> 再见，我的初中时代；你好，我们的未来！</span>
+            </p>
+
+          </div>FF
         </div>
       </div>
     </div>
-    <!-- 页脚 -->
-    <footer>
-      <div class="footer-container">
-        <!-- 页脚相关链接 -->
-        <div class="footer-section">
-          <h4>相关链接</h4>
-          <a href="./home.html">首页</a>
-          <a href="./album.html">相册</a>
-          <a
-            href="https://static-mp-7d81c498-1dd1-4c61-9e2a-316a8c29746a.next.bspapp.com/"
-            >留言板</a
-          >
-          <a href="./changelog.html">更新日志</a>
-          <div class="copyright"><p>Copyright © 2022-2024</p></div>
+  </div>
+  </div>
+  <!-- 页脚 -->
+  <footer>
+    <div class="footer-container">
+      <!-- 页脚相关链接 -->
+      <div class="footer-section">
+        <h4>相关链接</h4>
+        <a href="./home.html">首页</a>
+        <a href="./album.html">相册</a>
+        <a href="https://static-mp-7d81c498-1dd1-4c61-9e2a-316a8c29746a.next.bspapp.com/">留言板</a>
+        <a href="./changelog.html">更新日志</a>
+        <div class="copyright">
+          <p>Copyright © 2022-2024</p>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <button class="button" onclick="scrollToTop()"></button>
-    <script>
-      function scrollToTop() {
-        // 滚动到顶部的函数
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth", // 平滑滚动
-        });
-      }
-      window.onload = function () {
-        var audio = document.getElementById("myAudio");
-        audio.play();
-      };
-    </script>
-  </body>
+  <button class="button" onclick="scrollToTop()"></button>
+  <script>
+    function scrollToTop() {
+      // 滚动到顶部的函数
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", // 平滑滚动
+      });
+    }
+    window.onload = function () {
+      var audio = document.getElementById("myAudio");
+      audio.play();
+    };
+  </script>
+</body>
+
 </html>

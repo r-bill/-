@@ -2,55 +2,125 @@
 body {
   overflow-y: scroll;
 }
+
 /* flex布局 */
 .flex {
   display: flex;
 }
+
 /* 占满比例 */
 .flex1 {
   flex: 1;
 }
+
 /* 竖向 */
 .column {
   display: flex;
-  flex-direction: column; /* 垂直排列 */
-  align-items: center; /* 水平居中对齐子元素 */
-  justify-content: space-around; /* 子元素之间平均分布空间 */
+  flex-direction: column;
+  /* 垂直排列 */
+  align-items: center;
+  /* 水平居中对齐子元素 */
+  justify-content: space-around;
+  /* 子元素之间平均分布空间 */
   padding: 20px;
 }
+
 /* 阴影 */
 .shadow {
   box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
     rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
 }
+
 /* 白色背景 */
 .white {
   background-color: #fff;
 }
+
 /* 上下左右外边距 */
 
 .mg8 {
   margin: 8px;
 }
+
 /* 边框圆角 */
 .fillet {
   border-radius: 15px;
 }
+
 /* 分辨率小于600px */
 .img-responsive {
   width: 100%;
   height: auto;
 }
+
+.white {
+  background: #fff;
+  border-radius: 8px;
+  /* 圆角 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* 阴影 */
+  padding: 20px;
+  /* 内边距 */
+}
+
+.white h2 {
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+  /* 标题居中 */
+  margin-bottom: 15px;
+  /* 标题和文本之间添加些间隔 */
+}
+.white h3 {  color: #333;
+  text-align: center;
+  /* 标题居中 */
+  margin-bottom: 15px;
+  /* 标题和文本之间添加些间隔 */}
+.white p {
+  color: #666;
+  line-height: 1.6;
+  /* 行高增加，增强可读性 */
+  text-align: justify;
+  /* 文本两端对齐 */
+  margin-bottom: 10px;
+  /* 段落之间的间隔 */
+}
+
+.email-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* 调整图片与按钮之间的间距 */
+}
+
+.email-icon {
+  width: 50px;
+  /* 或者根据需要调整大小 */
+  height: auto;
+}
+
+.message-button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.message-button:hover {
+  background-color: #0056b3;
+}
+
 @media (max-width: 1017px) {
   .neirong {
-
     width: 100%;
   }
+
   /* 上边距 */
   .t-margin {
     margin-top: 15px;
   }
-
 
   .tupian {
     margin-top: 45px;
@@ -58,14 +128,12 @@ body {
     width: 100%;
   }
 }
+
 /* 分辨率大于600px */
 @media (min-width: 1017px) {
   .neirong {
-
     width: 100%;
   }
-
-
 
   /* 上边距 */
   .t-margin {

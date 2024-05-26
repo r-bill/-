@@ -2,9 +2,11 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   background: rgb(23, 23, 23);
 }
+
 a {
   text-decoration: none;
   position: absolute;
@@ -12,14 +14,12 @@ a {
   top: 50%;
   transform: translate(-50%, -50%);
   font-size: 24px;
-  background: linear-gradient(
-    100deg,
-    #03a9f4,
-    #5eff00,
-    #ffeb3b,
-    #fc000d,
-    #03a9f4
-  );
+  background: linear-gradient(100deg,
+      #03a9f4,
+      #5eff00,
+      #ffeb3b,
+      #fc000d,
+      #03a9f4);
   background-size: 600%;
   width: 200px;
   height: 70px;
@@ -30,6 +30,7 @@ a {
   border-radius: 50px;
   z-index: 1;
 }
+
 a::before {
   content: "";
   position: absolute;
@@ -42,17 +43,21 @@ a::before {
   filter: blur(20px);
   z-index: -1;
 }
+
 a:hover {
   animation: sun 8s infinite;
 }
+
 @keyframes sun {
   100% {
     background-position: -400% 0;
   }
 }
+
 .flex {
   display: flex;
 }
+
 .wenziweizhi {
   position: absolute;
   left: 50%;

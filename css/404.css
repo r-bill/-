@@ -3,9 +3,11 @@
   padding: 0;
   margin: 0;
 }
+
 body {
   background-color: #111;
 }
+
 .container {
   /* 绝对定位 */
   position: absolute;
@@ -30,6 +32,7 @@ body {
   /* 动画  名称 时长  第三个属性值是贝塞尔曲线(让动画的运动轨迹有很多可能性),有兴趣自己研究一下(https://cubic-bezier.com/) infinite是无限次播放 */
   animation: move 6s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
 }
+
 .container::before,
 .container::after {
   content: "";
@@ -44,6 +47,7 @@ body {
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.8);
 }
+
 .container::before {
   width: 35px;
   top: 40px;
@@ -51,6 +55,7 @@ body {
   /* 逆时针旋转40度 */
   transform: rotate(-40deg);
 }
+
 /* 行星 start */
 .container .planet {
   width: 100%;
@@ -59,6 +64,7 @@ body {
   /* 同上 */
   background-image: linear-gradient(150deg, #a37dce, #5f2093, transparent);
 }
+
 /* 行星 end */
 /* 环绕的轨道 start */
 .container .planet::before,
@@ -76,11 +82,13 @@ body {
   /* 逆时针旋转20度 */
   transform: rotate(-20deg);
 }
+
 .container .planet::after {
   border-top-color: #c099ef;
   /* 这个属性是堆叠顺序 只针对定位元素有效 这里随便写个负值就可以对于的部分就会被覆盖掉 */
   z-index: -99;
 }
+
 /* 环绕的轨道 end */
 
 /* 做一下漂浮的动画 */
@@ -88,16 +96,20 @@ body {
   0% {
     top: 50%;
   }
+
   50% {
     top: 45%;
   }
+
   100% {
     top: 50%;
   }
 }
+
 .flex {
   display: flex;
 }
+
 .wenziweizhi {
   width: 100vw;
   position: absolute;
@@ -105,17 +117,26 @@ body {
   transform: translate(-50%, -400%);
   text-align: center;
 }
+
 .goBack-btn {
   position: absolute;
   left: 50%;
   transform: translate(-50%, -400%);
   text-align: center;
-  position: absolute; /* 绝对定位 */
-  bottom: 10px; /* 底部距离 */
-  background-color: #4caf50; /* 背景颜色 */
-  color: white; /* 文字颜色 */
-  padding: 10px 20px; /* 内边距 */
-  font-size: 16px; /* 字体大小 */
-  border-radius: 5px; /* 边框圆角 */
-  border: none; /* 无边框 */
+  position: absolute;
+  /* 绝对定位 */
+  bottom: 10px;
+  /* 底部距离 */
+  background-color: #4caf50;
+  /* 背景颜色 */
+  color: white;
+  /* 文字颜色 */
+  padding: 10px 20px;
+  /* 内边距 */
+  font-size: 16px;
+  /* 字体大小 */
+  border-radius: 5px;
+  /* 边框圆角 */
+  border: none;
+  /* 无边框 */
 }

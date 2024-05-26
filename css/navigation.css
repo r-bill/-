@@ -1,184 +1,284 @@
 /* 重置全局样式 */
 * {
-  padding: 0; /* 初始化内边距 */
-  margin: 0; /* 初始化外边距 */
+  padding: 0;
+  /* 初始化内边距 */
+  margin: 0;
+  /* 初始化外边距 */
 }
 
 /* 页面整体样式 */
 body {
-  background-color: #e6f1f9; /* 背景颜色 */
-  max-width: 100%; /* 最大宽度 */
-  overflow-x: hidden; /* 水平溢出隐藏 */
+  background-color: #e6f1f9;
+  /* 背景颜色 */
+  max-width: 100%;
+  /* 最大宽度 */
+  overflow-x: hidden;
+  /* 水平溢出隐藏 */
 }
 
 /* 导航栏样式 */
 .navbar {
-  position: fixed; /* 固定定位 */
-  top: 0; /* 顶部距离 */
-  width: 100%; /* 宽度占满整个屏幕 */
-  height: 66px; /* 高度 */
-  background-color: #e6f1f9; /* 背景颜色 */
-  box-shadow: 0 1px 30px #c6d9ed; /* 阴影效果 */
-  z-index: 999; /* z轴顺序，置顶显示 */
+  position: fixed;
+  /* 固定定位 */
+  top: 0;
+  /* 顶部距离 */
+  width: 100%;
+  /* 宽度占满整个屏幕 */
+  height: 66px;
+  /* 高度 */
+  background-color: #e6f1f9;
+  /* 背景颜色 */
+  box-shadow: 0 1px 30px #c6d9ed;
+  /* 阴影效果 */
+  z-index: 999;
+  /* z轴顺序，置顶显示 */
 }
 
 /* 复选框样式 */
 .navbar input {
-  display: none; /* 隐藏复选框 */
+  display: none;
+  /* 隐藏复选框 */
 }
 
 /* 复选框标签样式 */
 .navbar label {
-  position: absolute; /* 绝对定位 */
-  top: calc(50% - 25px); /* 相对父元素垂直居中 */
-  right: 50px; /* 距右边50像素 */
-  width: 50px; /* 宽度 */
-  height: 50px; /* 高度 */
-  border-radius: 6px; /* 圆角 */
-  border: 1px solid rgba(198, 217, 237, 0.3); /* 边框 */
-  background-color: #e6f1f9; /* 背景颜色 */
-  box-shadow: 5px 3px 6px 1px #c6d9ed, -5px -3px 6px 1px #fff; /* 阴影效果 */
-  cursor: pointer; /* 鼠标指针样式 */
-  transition: all 0.5s ease-out; /* 过渡效果 */
+  position: absolute;
+  /* 绝对定位 */
+  top: calc(50% - 25px);
+  /* 相对父元素垂直居中 */
+  right: 50px;
+  /* 距右边50像素 */
+  width: 50px;
+  /* 宽度 */
+  height: 50px;
+  /* 高度 */
+  border-radius: 6px;
+  /* 圆角 */
+  border: 1px solid rgba(198, 217, 237, 0.3);
+  /* 边框 */
+  background-color: #e6f1f9;
+  /* 背景颜色 */
+  box-shadow: 5px 3px 6px 1px #c6d9ed, -5px -3px 6px 1px #fff;
+  /* 阴影效果 */
+  cursor: pointer;
+  /* 鼠标指针样式 */
+  transition: all 0.5s ease-out;
+  /* 过渡效果 */
 }
 
 /* 导航栏标签伪元素样式 */
 .navbar label::before,
 .navbar label::after {
-  content: ""; /* 内容为空 */
-  position: absolute; /* 绝对定位 */
-  left: 5px; /* 距左边5像素 */
-  width: 40px; /* 宽度 */
-  height: 4px; /* 高度 */
-  border-radius: 4px; /* 圆角 */
-  background-color: #042a41; /* 背景颜色 */
-  transition: transform 0.3s ease-out, top 0.3s ease-out 0.3s; /* 过渡效果 */
+  content: "";
+  /* 内容为空 */
+  position: absolute;
+  /* 绝对定位 */
+  left: 5px;
+  /* 距左边5像素 */
+  width: 40px;
+  /* 宽度 */
+  height: 4px;
+  /* 高度 */
+  border-radius: 4px;
+  /* 圆角 */
+  background-color: #042a41;
+  /* 背景颜色 */
+  transition: transform 0.3s ease-out, top 0.3s ease-out 0.3s;
+  /* 过渡效果 */
 }
 
 /* 导航栏标签伪元素位置样式 */
 .navbar label::before {
-  top: calc(50% - 10px); /* 上边距 */
+  top: calc(50% - 10px);
+  /* 上边距 */
 }
 
 .navbar label::after {
-  top: calc(50% + 6px); /* 上边距 */
+  top: calc(50% + 6px);
+  /* 上边距 */
 }
 
 /* 导航栏标签选中样式 */
-.navbar input:checked + label {
+.navbar input:checked+label {
   box-shadow: 0 0 0 #fff, 0 0 0 #fff, 5px 3px 6px 1px #c6d9ed inset,
-    -5px -3px 6px 1px #fff inset; /* 阴影效果 */
+    -5px -3px 6px 1px #fff inset;
+  /* 阴影效果 */
 }
 
-.navbar input:checked + label::before {
-  top: calc(50% - 2px); /* 上边距 */
-  transform: rotate(-45deg); /* 逆时针旋转45度 */
-  transition: top 0.3s ease-out, transform 0.3s ease-out 0.3s; /* 过渡效果 */
+.navbar input:checked+label::before {
+  top: calc(50% - 2px);
+  /* 上边距 */
+  transform: rotate(-45deg);
+  /* 逆时针旋转45度 */
+  transition: top 0.3s ease-out, transform 0.3s ease-out 0.3s;
+  /* 过渡效果 */
 }
 
-.navbar input:checked + label::after {
-  top: calc(50% - 2px); /* 上边距 */
-  transform: rotate(45deg); /* 顺时针旋转45度 */
-  transition: top 0.3s ease-out, transform 0.3s ease-out 0.3s; /* 过渡效果 */
+.navbar input:checked+label::after {
+  top: calc(50% - 2px);
+  /* 上边距 */
+  transform: rotate(45deg);
+  /* 顺时针旋转45度 */
+  transition: top 0.3s ease-out, transform 0.3s ease-out 0.3s;
+  /* 过渡效果 */
 }
 
 /* 移动端导航栏样式 */
 .navbar ul {
-  position: relative; /* 相对定位 */
-  top: 66px; /* 顶部距离 */
-  width: 100%; /* 宽度 */
-  opacity: 0; /* 不透明度 */
-  transform: scaleY(0); /* 沿y轴缩放为0 */
-  transform-origin: 50% 0; /* 变形原点 */
-  transition: all 0.5s ease-out; /* 过渡效果 */
+  position: relative;
+  /* 相对定位 */
+  top: 66px;
+  /* 顶部距离 */
+  width: 100%;
+  /* 宽度 */
+  opacity: 0;
+  /* 不透明度 */
+  transform: scaleY(0);
+  /* 沿y轴缩放为0 */
+  transform-origin: 50% 0;
+  /* 变形原点 */
+  transition: all 0.5s ease-out;
+  /* 过渡效果 */
 }
 
 .navbar ul li {
-  list-style: none; /* 列表样式为无 */
-  width: 100%; /* 宽度 */
-  height: 66px; /* 高度 */
+  list-style: none;
+  /* 列表样式为无 */
+  width: 100%;
+  /* 宽度 */
+  height: 66px;
+  /* 高度 */
 }
 
 .navbar ul li a {
-  display: block; /* 块级元素 */
-  width: 100%; /* 宽度 */
-  height: 100%; /* 高度 */
-  line-height: 66px; /* 行高 */
-  text-align: center; /* 文本居中 */
-  font-size: 18px; /* 字体大小 */
-  font-weight: 700; /* 字重 */
-  text-decoration: none; /* 文本装饰 */
-  color: #042a41; /* 文本颜色 */
-  border: 1px solid rgba(198, 217, 237, 0.3); /* 边框 */
-  background-color: #c6d9ed; /* 背景颜色 */
-  transition: all 0.3s ease-out; /* 过渡效果 */
+  display: block;
+  /* 块级元素 */
+  width: 100%;
+  /* 宽度 */
+  height: 100%;
+  /* 高度 */
+  line-height: 66px;
+  /* 行高 */
+  text-align: center;
+  /* 文本居中 */
+  font-size: 18px;
+  /* 字体大小 */
+  font-weight: 700;
+  /* 字重 */
+  text-decoration: none;
+  /* 文本装饰 */
+  color: #042a41;
+  /* 文本颜色 */
+  border: 1px solid rgba(198, 217, 237, 0.3);
+  /* 边框 */
+  background-color: #c6d9ed;
+  /* 背景颜色 */
+  transition: all 0.3s ease-out;
+  /* 过渡效果 */
 }
 
 .navbar ul li a:hover {
-  box-shadow: 0 0 0 #fff, 0 15px 20px #c6d9ed inset; /* 阴影效果 */
+  box-shadow: 0 0 0 #fff, 0 15px 20px #c6d9ed inset;
+  /* 阴影效果 */
 }
 
-.navbar input:checked ~ ul {
-  opacity: 1; /* 不透明度 */
-  transform: scaleY(1); /* 沿y轴缩放为1 */
+.navbar input:checked~ul {
+  opacity: 1;
+  /* 不透明度 */
+  transform: scaleY(1);
+  /* 沿y轴缩放为1 */
 }
 
 /* PC端导航栏样式 */
 @media (min-width: 1017px) {
   .navbar label {
-    display: none; /* 隐藏标签 */
+    display: none;
+    /* 隐藏标签 */
   }
 
   .navbar ul {
-    position: static; /* 静态定位 */
-    display: flex; /* 弹性布局 */
-    justify-content: space-around; /* 主轴对齐方式 */
-    align-items: center; /* 交叉轴对齐方式 */
-    width: 100%; /* 宽度 */
-    height: 100%; /* 高度 */
-    margin: 0 auto; /* 外边距 */
-    opacity: 1; /* 不透明度 */
-    transform: scaleY(1); /* 沿y轴缩放为1 */
+    position: static;
+    /* 静态定位 */
+    display: flex;
+    /* 弹性布局 */
+    justify-content: space-around;
+    /* 主轴对齐方式 */
+    align-items: center;
+    /* 交叉轴对齐方式 */
+    width: 100%;
+    /* 宽度 */
+    height: 100%;
+    /* 高度 */
+    margin: 0 auto;
+    /* 外边距 */
+    opacity: 1;
+    /* 不透明度 */
+    transform: scaleY(1);
+    /* 沿y轴缩放为1 */
   }
 
   .navbar ul li {
-    text-align: center; /* 文本居中 */
+    text-align: center;
+    /* 文本居中 */
   }
 
   .navbar ul li a {
-    display: inline; /* 行内元素 */
-    padding: 14px 30px; /* 内边距 */
-    border-radius: 60px; /* 圆角 */
-    box-shadow: 5px 3px 6px 1px #c6d9ed, -5px -3px 6px 1px #fff; /* 阴影效果 */
-    margin-left: 30px; /* 左外边距 */
+    display: inline;
+    /* 行内元素 */
+    padding: 14px 30px;
+    /* 内边距 */
+    border-radius: 60px;
+    /* 圆角 */
+    box-shadow: 5px 3px 6px 1px #c6d9ed, -5px -3px 6px 1px #fff;
+    /* 阴影效果 */
+    margin-left: 30px;
+    /* 左外边距 */
   }
 
   .navbar ul li a:hover {
     box-shadow: 0 0 0 #fff, 0 0 0 #fff, 5px 3px 6px 1px #c6d9ed inset,
-      -5px -3px 6px 1px #fff inset; /* 阴影效果 */
+      -5px -3px 6px 1px #fff inset;
+    /* 阴影效果 */
   }
 }
+
 /* 返回顶部按钮 */
 .button {
-  background-color: #e6f1f9; /* 背景色 */
-  color: white; /* 文本颜色 */
-  padding: 15px; /* 内边距 */
-  border: none; /* 去掉边框 */
-  border-radius: 5px; /* 圆角 */
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* 阴影效果 */
-  cursor: pointer; /* 鼠标指针样式 */
-  transition: background-color 0.3s ease; /* 平滑过渡效果 */
-  position: fixed; /* 固定定位 */
-  right: 10px; /* 左侧距离 */
-  top: 80vh; /* 顶部距离 */
-  width: 50px; /* 按钮宽度 */
-  height: 50px; /* 按钮高度 */
-  overflow: hidden; /* 隐藏溢出的部分 */
-  background-size: contain; /* 调整背景图片大小以适应按钮 */
+  background-color: #e6f1f9;
+  /* 背景色 */
+  color: white;
+  /* 文本颜色 */
+  padding: 15px;
+  /* 内边距 */
+  border: none;
+  /* 去掉边框 */
+  border-radius: 5px;
+  /* 圆角 */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  /* 阴影效果 */
+  cursor: pointer;
+  /* 鼠标指针样式 */
+  transition: background-color 0.3s ease;
+  /* 平滑过渡效果 */
+  position: fixed;
+  /* 固定定位 */
+  right: 10px;
+  /* 左侧距离 */
+  top: 80vh;
+  /* 顶部距离 */
+  width: 50px;
+  /* 按钮宽度 */
+  height: 50px;
+  /* 按钮高度 */
+  overflow: hidden;
+  /* 隐藏溢出的部分 */
+  background-size: contain;
+  /* 调整背景图片大小以适应按钮 */
   background-image: url("../img/button/arrow-up.svg");
   background-repeat: no-repeat;
 }
 
 .button:hover {
-  background-color: #c6d9ed; /* 悬停时的背景色 */
+  background-color: #c6d9ed;
+  /* 悬停时的背景色 */
 }
