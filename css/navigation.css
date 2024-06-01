@@ -264,11 +264,11 @@ body {
   /* 固定定位 */
   right: 10px;
   /* 左侧距离 */
-  top: 80vh;
+  top: 75vh;
   /* 顶部距离 */
-  width: 50px;
+  width: 40px;
   /* 按钮宽度 */
-  height: 50px;
+  height: 40px;
   /* 按钮高度 */
   overflow: hidden;
   /* 隐藏溢出的部分 */
