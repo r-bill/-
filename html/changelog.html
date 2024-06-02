@@ -5,12 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>更新日志</title>
-  <link rel="stylesheet" href="../css/navigation.css" />
-  <!-- 引入导航样式表 -->
-  <link rel="stylesheet" href="../css/changelog.css" />
-  <!-- 引入更新日志样式表 -->
-  <link rel="stylesheet" href="../css/footer.css" />
-  <!-- 引入页脚样式表 -->
+  <link rel="stylesheet" href="../css/navigation.css" /> <!-- 引入导航样式表 -->
+  <link rel="stylesheet" href="../css/changelog.css" /> <!-- 引入更新日志样式表 -->
+  <link rel="stylesheet" href="../css/footer.css" /> <!-- 引入页脚样式表 -->
+  <link rel="stylesheet" href="../css/b2t.css"><!-- 引入返回顶部样式表 -->
 </head>
 
 <body>
@@ -41,6 +39,7 @@
     </div>
     <ul>
       <h2>2024年5月26日</h2>
+      <h3>版本更新 v0.1.7</h3>
       <li>
         <h3>新增功能</h3>
         <p>添加首页内容</p>
@@ -49,6 +48,7 @@
     </ul>
     <ul>
       <h2>2024年5月5日</h2>
+      <h3>版本更新 v0.1.6</h3>
       <li>
         <h3>新增功能</h3>
         <p>留言板功能上线</p>
@@ -57,6 +57,7 @@
     </ul>
     <ul>
       <h2>2024年4月20日</h2>
+      <h3>版本更新 v0.1.5</h3>
       <li>
         <h3>新增功能</h3>
         <p>新增返回顶部按钮</p>
@@ -86,16 +87,7 @@
 
   <!-- 返回顶部按钮 -->
   <button class="button" onclick="scrollToTop()"></button>
-  <script>
-    f; // 未定义的变量f
-    function scrollToTop() {
-      // 滚动到顶部的函数
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth", // 平滑滚动
-      });
-    }
-  </script>
+  <script src="../js/b2t.js"></script>
 </body>
 
 </html>

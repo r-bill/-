@@ -1,6 +1,7 @@
 /* 隐藏垂直滚动条 */
 body {
-  overflow-y: scroll;
+  overflow-x: scroll;
+
 }
 
 /* flex布局 */

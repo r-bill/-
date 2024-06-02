@@ -7,9 +7,10 @@
   <title>首页</title>
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
 
-  <link rel="stylesheet" href="../css/navigation.css" />
-  <link rel="stylesheet" href="../css/home.css" />
-  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="stylesheet" href="../css/navigation.css" /> <!-- 引入导航样式表 -->
+  <link rel="stylesheet" href="../css/home.css" /> <!-- 引入首页样式表 -->
+  <link rel="stylesheet" href="../css/footer.css" /> <!-- 引入页脚样式表 -->
+  <link rel="stylesheet" href="../css/b2t.css"><!-- 引入返回顶部样式表 -->
 
 </head>
 
@@ -96,20 +97,9 @@
     </div>
   </footer>
 
+  <!-- 返回顶部按钮 -->
   <button class="button" onclick="scrollToTop()"></button>
-  <script>
-    function scrollToTop() {
-      // 滚动到顶部的函数
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth", // 平滑滚动
-      });
-    }
-    window.onload = function () {
-      var audio = document.getElementById("myAudio");
-      audio.play();
-    };
-  </script>
+  <script src="../js/b2t.js"></script>
 </body>
 
 </html>
