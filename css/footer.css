@@ -26,6 +26,19 @@ footer {
 }
 
 /* 类名为footer-section的a标签样式 */
+.footer-section p {
+  text-align: center;
+  /* 文本居中 */
+  /* 显示为块级元素，颜色为浅灰色，去掉下划线并设置外边距 */
+  display: block;
+  color: #666;
+  text-decoration: none;
+  margin-bottom: 8px;
+  margin-top: 30px;
+  /* 在链接之间添加一些间隔 */
+}
+
+/* 类名为footer-section的a标签样式 */
 .footer-section a {
   text-align: center;
   /* 文本居中 */
