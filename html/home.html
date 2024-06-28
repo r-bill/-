@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../css/home.css" /> <!-- 引入首页样式表 -->
   <link rel="stylesheet" href="../css/footer.css" /> <!-- 引入页脚样式表 -->
   <link rel="stylesheet" href="../css/b2t.css"><!-- 引入返回顶部样式表 -->
+  <link rel="stylesheet" href="../css/album.css" /><!-- 引入轮播图样式表 -->
 
 </head>
 
@@ -30,7 +31,6 @@
     <input type="checkbox" id="nav" /><label for="nav"></label>
     <ul>
       <li><a href="./home.html">首页</a></li>
-      <li><a href="./album.html">相册</a></li>
       <li><a href="https://static-mp-7d81c498-1dd1-4c61-9e2a-316a8c29746a.next.bspapp.com/">留言板</a></li>
 
       <li><a href="./changelog.html">更新日志</a></li>
@@ -46,8 +46,23 @@
         <div style="margin-top: 66px" class="white shadow neirong fillet t-margin">
           <!-- 初中毕业特别内容 -->
           <h2>我们毕业了</h2>
-          <p>初中生活即将结束，我们一起回忆那些美好的时光。感谢所有老师和同学的支持与陪伴，未来的道路我们继续携手前行。</p>
-          <img src="../img/1-img/1-2.jpg" alt="初中毕业照片" style="width: 100%; margin-top: 30px; border-radius: 8px" />
+          <p>初中生活即将结束，我们一起回忆那些美好的时光。感谢所有老师和同学的支持与陪伴，未来的道路我们继续携手前行。</p>  <div class="slideshow-container">
+            <!-- 图片轮播内容 -->
+            <div class="mySlides fade">
+              <img src="#" alt="集体照（图片招租（￣︶￣）↗" style="width: 100%; margin-top: 30px; border-radius: 8px" />
+              <div class="text"></div>
+            </div>
+        
+            <div class="mySlides fade">
+              <img src="#" alt="集体照（图片招租（￣︶￣）↗" style="width: 100%; margin-top: 30px; border-radius: 8px" />
+              <div class="text"></div>
+            </div>
+            <!-- 前后切换按钮和下载按钮 -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+
+          
           <h3 style="margin-top: 30px">毕业不是结束，而是新旅程的开始</h3>
         </div>
 
@@ -87,7 +102,6 @@
       <div class="footer-section">
         <h4>相关链接</h4>
         <a href="./home.html">首页</a>
-        <a href="./album.html">相册</a>
         <a href="https://static-mp-7d81c498-1dd1-4c61-9e2a-316a8c29746a.next.bspapp.com/">留言板</a>
         <a href="./changelog.html">更新日志</a>
        <p class="footer-section-p">开源地址：</p><a href="https://github.com/r-bill/main">https://github.com/r-bill/main</a>
@@ -101,6 +115,8 @@
   <!-- 返回顶部按钮 -->
   <button class="button" onclick="scrollToTop()"></button>
   <script src="../js/b2t.js"></script>
+  <script src="../js/album.js"></script>
+
 </body>
 
 </html>
